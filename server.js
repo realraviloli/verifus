@@ -19,11 +19,14 @@ app.use((req, res, next) => {
   const fullUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
 
   console.log('=== Request Log ===');
+  console.log(`Method: ${req.method}`);
+  console.log(`Path: ${req.path}`);
   console.log(`IP: ${clientIP}`);
   console.log(`Time: ${requestTime}`);
   console.log(`Code: ${code}`);
   console.log(`User-Agent: ${userAgent}`);
   console.log(`URL: ${fullUrl}`);
+  console.log(`Body:`, req.body);
   console.log('==================');
 
   next();
@@ -64,6 +67,23 @@ app.post('/camera/device', (req, res) => {
 // GET /health endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
+});
+
+// GET /camera/:name.txt endpoint
+app.get('/camera/:name.txt', (req, res) => {
+  console.log('TXT:', req.params.name);
+  res.type('text/plain');
+  res.send('OK');
+});
+
+// GET /chmp4.html endpoint
+app.get('/chmp4.html', (req, res) => {
+  console.log('HTML requested');
+  res.send(`
+    <html>
+        <body>OK</body>
+    </html>
+  `);
 });
 
 // Error handling middleware
