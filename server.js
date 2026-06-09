@@ -47,8 +47,8 @@ app.post('/camera/useTimeCode', (req, res) => {
     ns: 0,
     expiredTime: expiredTime,
     token: token,
-    data: "",
-    sig: ""
+    data: "yXDu8TcirdugPVmeDSFc6o8bf9Mgcg7QwVLmG0qUY7dbnpxF6LsK/7lA7WlFqq/X8pzKUk3R+bYDCk4aCW56BER0jJErq+kRSzh6zxiBoMMe6JjFWW3aVLgVz7yeqdzHzQnnDGTDWgKpxYHti1xi5dtI5RVMp7F8WZn1jwyroX+igV58YABPwy416c6mxYFRZYgJChaDDgMf8ESu5u8mo9x2zkOw/gUK3CeDueK/xT0D5T0gO4iZXRR326zd9NnEAHSlpeIYRrJsmZC6mw4htoqREv9Ol7BTm1+g5bPq6HvZdQ93/yb8JIeVW44R9++WSdq40U8iKGbuIl4Y0wSakg==",
+    sig: "NP5+UZEO6XQ5W6S35KqgqK5zNW7vAwVWQdYlclH+xJdurTrpopeDh4UxNUtKlITIHAxhPK8BRlFr58EWSJiCBl/Ode/nHNMzyELfUoAI/qoDOMliKxRPf5E5iQJIAmsx3SMEFzwYzjTYpBdhAHsPGDvUbVhpkxN0kU9qCGAbWWIeYBid16oaE5rd62H2TlqIGKVLO6wdj5dgsf18mKznSQA4IV+tMxcREaX5odWUNS6DC+ln69Q+g8BCvWo+MSahEX+588dXQR4qKsWTqyKf9gMc+TX63AwvmrGcFCjh0vz4+j4QFIpX/nRagmkBYct1K/aK1TEJzOGKKglwZTFINg=="
   };
 
   res.json(response);
